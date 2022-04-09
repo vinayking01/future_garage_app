@@ -40,7 +40,24 @@ class _MyAppState extends State<MyApp> {
               UpperBar(),
               UpperBody(),
               MiddleBody(),
-              LowerBar(),
+              Container(
+                child: Column(
+                  children: <Widget>[
+                    LowerBar(),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      height: 7,
+                      width: 150,
+                      decoration: BoxDecoration(
+                        color: Color.fromRGBO(24, 25, 26, 0.7),
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),

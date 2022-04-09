@@ -21,7 +21,7 @@ class _LowerBarState extends State<LowerBar> {
         children: <Widget>[
           Container(
             height: height * 0.06,
-            width: width * 0.65,
+            width: width * 0.55,
             decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.all(
@@ -40,7 +40,7 @@ class _LowerBarState extends State<LowerBar> {
                   },
                   icon: Icon(
                     Icons.zoom_out,
-                    color: Colors.green,
+                    color: Colors.black,
                   ),
                 ),
 
@@ -53,7 +53,7 @@ class _LowerBarState extends State<LowerBar> {
                   },
                   icon: Icon(
                     Icons.person,
-                    color: Colors.green,
+                    color: Colors.grey,
                   ),
                 ),
                 IconButton(
@@ -65,7 +65,7 @@ class _LowerBarState extends State<LowerBar> {
                   },
                   icon: Icon(
                     Icons.add,
-                    color: Colors.green,
+                    color: Colors.grey,
                   ),
                 ),
 
@@ -78,7 +78,7 @@ class _LowerBarState extends State<LowerBar> {
                   },
                   icon: Icon(
                     Icons.approval,
-                    color: Colors.green,
+                    color: Colors.grey,
                   ),
                 ),
 

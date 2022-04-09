@@ -12,12 +12,13 @@ class _MiddleBodyState extends State<MiddleBody> {
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
+    double h1 = height * 0.038;
     double width = MediaQuery.of(context).size.width;
     return Container(
       child: Column(
         children: <Widget>[
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: const <Widget>[
               Text(
                 "Bike Status",
@@ -71,14 +72,51 @@ class _MiddleBodyState extends State<MiddleBody> {
                               ),
                             ),
                           ],
-                        )
-                      ,
+                        ),
+                        // Container(
+                        //    // decoration: BoxDecoration(color: Colors.blue),
+                        //   height: height * 0.16,
+                        //   width: width * 0.23,
+                        //   // width: 90,
+                        //   margin: EdgeInsets.fromLTRB(0,0, 40, 0),
+                        //   child: Card(
+                        //     shape: RoundedRectangleBorder(
+                        //       borderRadius: BorderRadius.circular(15.0),
+                        //     ),
+                        //     elevation: 8,
+                        //     child: Column(
+                        //       children: <Widget>[
+                        //         Container(
+                        //           height: height * 0.038,
+                        //           width: width * 0.23,
+                        //         ),
+                        //         Container(
+                        //             height: height * 0.108,
+                        //             width: width * 0.22,
+                        //             color: Colors.green,
+                        //
+                        //           child: Column(children: <Widget>[
+                        //             Container(
+                        //               child: Text(
+                        //                 "80",
+                        //                 style: TextStyle(
+                        //                   fontWeight: FontWeight.w900,
+                        //                   fontSize: 35,
+                        //                 ),
+                        //               ),
+                        //             ),
+                        //             Center(child: Text("%")),
+                        //           ],
+                        //           ),
+                        //         ),
+                        //       ],
+                        //     ),
+                        //   ),
+                        // ),
                         Container(
-                           // decoration: BoxDecoration(color: Colors.blue),
                           height: height * 0.16,
                           width: width * 0.23,
-                          // width: 90,
-                          margin: EdgeInsets.fromLTRB(0,0, 40, 0),
+                          margin: EdgeInsets.fromLTRB(0, 0, 40, 0,),
                           child: Card(
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(15.0),
@@ -87,26 +125,33 @@ class _MiddleBodyState extends State<MiddleBody> {
                             child: Column(
                               children: <Widget>[
                                 Container(
-                                  height: height * 0.038,
+                                  height: h1,
                                   width: width * 0.23,
                                 ),
                                 Container(
-                                    height: height * 0.108,
-                                    width: width * 0.22,
+                                  height: height * 0.110,
+                                  width: width * 0.23,
+                                  decoration: BoxDecoration(
                                     color: Colors.green,
-
-                                  child: Column(children: <Widget>[
-                                    Container(
-                                      child: Text(
-                                        "80",
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.w900,
-                                          fontSize: 35,
+                                    borderRadius: const BorderRadius.only(
+                                      bottomLeft: Radius.circular(15.0),
+                                      bottomRight: Radius.circular(15.0),
+                                    ),
+                                  ),
+                                  child: Column(
+                                    children: <Widget>[
+                                      Container(
+                                        padding: EdgeInsets.only(top: height*0.02),
+                                        child: Text(
+                                          "80",
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.w900,
+                                            fontSize: 25,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    Center(child: Text("%")),
-                                  ],
+                                      Center(child: Text("%")),
+                                    ],
                                   ),
                                 ),
                               ],
